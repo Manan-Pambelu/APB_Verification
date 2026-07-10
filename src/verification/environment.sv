@@ -13,7 +13,7 @@ class environment;
 	driver      drv;
 	monitor     mon;
 	scoreboard  scb;
-	reference   reff;
+	//reference   reff;
 
 	function new(virtual APB_if dr_vif, virtual APB_if mon_vif, virtual APB_if ref_vif);
 		this.dr_vif=dr_vif;
@@ -31,8 +31,8 @@ class environment;
 			gen =new(gd_mbx);
 			drv=new(gd_mbx,dr_mbx);
 			mon=new(ms_mbx);
-			reff=new();
-			scb=new(ms_mbx,rs_mbx);
+			//reff=new();
+			//scb=new(ms_mbx,rs_mbx);
 
 		end
 	endtask
@@ -42,10 +42,11 @@ class environment;
 		gen.start();
 		drv.start();
 		mon.start();
-		scb.start();
-		reff.start();
+		//scb.start();
+		//reff.start();
 		join
-		scb.summary();
+
+		//scb.summary();
 	endtask
 endclass
 

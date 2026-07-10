@@ -1,8 +1,12 @@
+`include "../design/DUV.sv"
+`include "package.sv"
+
+
 module APB_top();
 	import package::*;
 		
 logic PCLK;
-logic PRESET;
+logic PRESETn;
 
 initial 
 	PCLK=1'b0;
@@ -10,10 +14,10 @@ initial
 initial begin
 	repeat(4)
 		@(posedge PCLK)
-		PRESET=0;
+		PRESETn=0;
 	repeat(200)
 		@(posedge PCLK)
-		PRESET=1;
+		PRESETn=1;
 end
 
 APB_if intrf(PCLK,PRESET); 

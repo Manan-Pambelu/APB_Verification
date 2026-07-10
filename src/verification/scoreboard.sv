@@ -1,3 +1,5 @@
+`include "define.svh"
+
 class scoreboard;
 	transaction trans_mon, trans_ref;
 	mailbox #(transaction) ms_mbx;
@@ -11,7 +13,7 @@ class scoreboard;
          endfunction
 
 	 task start();
-		 for(int i=0; i<=transaction_count; i++)
+		 for(int i=0; i<=`transaction_count; i++)
 		 begin
 			 trans_mon=new();
 			 trans_ref=new();
@@ -23,7 +25,7 @@ class scoreboard;
 					 $display("PADDR = %h ",trans_ref.PADDR);
 					 $display("PSEL = %d ",trans_ref.PSEL);
 					 $display("PENABLE =  %d ", trans_ref.PENABLE);
-					 $display("PWRITE = %d ",tras_ref.PWRITE);
+					 $display("PWRITE = %d ",trans_ref.PWRITE);
 					 $display("PWDATA = %h ",trans_ref.PWDATA);
 					 $display("PSTRB = %b ",trans_ref.PSTRB);
 					 $display("rdata_out = %h ",trans_ref.rdata_out);
@@ -38,7 +40,7 @@ class scoreboard;
 					 $display("PADDR = %h ",trans_mon.PADDR);
 					 $display("PSEL = %d ",trans_mon.PSEL);
 					 $display("PENABLE =  %d ", trans_mon.PENABLE);
-					 $display("PWRITE = %d ",tras_mon.PWRITE);
+					 $display("PWRITE = %d ",trans_mon.PWRITE);
 					 $display("PWDATA = %h ",trans_mon.PWDATA);
 					 $display("PSTRB = %b ",trans_mon.PSTRB);
 					 $display("rdata_out = %h ",trans_mon.rdata_out);
@@ -49,29 +51,33 @@ class scoreboard;
 			 join
 
 			 compare();
+		 end
 	 endtask
 
-	 task compare();
-	if((trans_ref.PADDR== trans_mon.PADDR)	&&(trans_ref.PSEL== trans_mon.PSEL)&&(trans_ref.PENABLE	== trans_mon.PENABLE)	
+task compare();
+	begin
+	         if((trans_ref.PADDR== trans_mon.PADDR)	&&(trans_ref.PSEL== trans_mon.PSEL)&&(trans_ref.PENABLE	== trans_mon.PENABLE)	
  	&&(trans_ref.PWRITE == trans_mon.PWRITE) &&(trans_ref.PWDATA  == trans_mon.PWDATA)   &&	(trans_ref.PSTRB == trans_mon.PSTRB)
     	&&(trans_ref.rdata_out == trans_mon.rdata_out)  &&(trans_ref.transfer_done == trans_mon.transfer_done) &&(trans_ref.error    == trans_mon.error))
-        
+		 begin
 	MATCH++;
 	$display("============================================DATA MATCH SUCCESSFUL MATCH=%d================================================",MATCH);
-	
+		 end
 	else
+	begin
 	MISS++;
 
 	$display("============================================DATA MATCH UNSUCCESSFUL MISS=%d================================================",MISS);
+	end
 	end
 endtask
 
 
 task summary();
 begin
-	$display("////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////");
-	$display("//////////////TOTAL MATCH =%d ////////////////////////////////////TOTAL MISS =%d ///////////////////////////////////////////////////");
-	$display("////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////");
+$display("////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////");
+$display("//////////////TOTAL MATCH =%d ////////////////////////////////////TOTAL MISS =%d ///////////////////////////////////////////////////");
+$display("////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////");
 end
 endtask
 endclass

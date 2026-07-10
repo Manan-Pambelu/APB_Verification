@@ -1,3 +1,5 @@
+`include "define.svh"
+
 class monitor;
 	transaction trans_obj;
 	mailbox #(transaction) ms_mbx;
@@ -10,7 +12,7 @@ class monitor;
 	endfunction
 
 	task start();
-		repeat @(vif.monitor_cb)
+		repeat(1) @(vif.monitor_cb)
 		for(int i=0; i<=`transaction_count; i++)
 		begin
 			trans_obj=new();

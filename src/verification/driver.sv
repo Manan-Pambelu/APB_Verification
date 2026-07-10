@@ -1,3 +1,5 @@
+`include "define.svh"
+
 class driver;
 
 	transaction trans_obj;
@@ -27,21 +29,33 @@ class driver;
 
 
 	task start();
-		repeat @(vif.driver_cb.PRESET==0)
+		repeat(1) @(vif.driver_cb)
 		for(int i=0; i<=`transaction_count; i++)
 		begin
 			$display("/////////////////////////////////////////////////////////////////////////////////////////////////////////");
-			$display("/////////////////////////////////////////////////////////////////////////////////////////////////////////");
+			
 				trans_obj=new();
                                 dr_mbx.get(trans_obj);
 				$display("%m driver driving at iteration %d",i);
+
+                     if(vif.driver_cb.PRESETn==0)
+
 			begin
-				vif.driver_cb.transfer   <=0;
+				vif.driver_cb.PRDATA     <=0;
+				vif.driver_cb.PREADY     <=0;
+				vif.driver_cb.PSLVERR    <=0;
+				
+			        vif.driver_cb.transfer   <=0;
+				vif.driver_cb.write_read <=trans_obj.write_read;
+				vif.driver_cb.addr_in    <=0;
+				vif.driver_cb.w_data_in  <=0;
+				vif.driver_cb.strb_in    <=0;
+
                                  
 				dr_mbx.put(trans_obj);
 
 				drv_cg.sample();
-				$display("COVERAGE WHEN PRESET IS 0 --------> %d",drv_cg.get_coverage());
+				$display("COVERAGE WHEN PRESETn IS 0 --------> %d",drv_cg.get_coverage());
 
 			end
 		else
@@ -62,7 +76,7 @@ class driver;
 			dr_mbx.put(trans_obj);
 
 			drv_cg.sample();
-			$display("COVERAGE WHEN PRESET IS 1 --------> %d",drv_cg.get_coverage());
+			$display("COVERAGE WHEN PRESETn IS 1 --------> %d",drv_cg.get_coverage());
 
 		end
                 begin
@@ -76,9 +90,11 @@ class driver;
 		$display("w_data_in %h",trans_obj.w_data_in);
 		$display("strb_in %b",trans_obj.strb_in);
                 $display("***************************************************");
+		end
+		end
 
 		endtask 
-		end
+		
 
 endclass
 				

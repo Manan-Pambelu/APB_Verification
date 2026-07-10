@@ -1,3 +1,4 @@
+`include "define.svh"
 class transaction;
 
          rand bit transfer;
@@ -14,6 +15,12 @@ class transaction;
          bit[`DATA_WIDTH-1:0] rdata_out;
          bit transfer_done;
          bit error;
+	 bit [`ADDR_WIDTH-1:0]PADDR;
+	 bit PSEL;
+	 bit PENABLE;
+	 bit PWRITE;
+	 bit [`DATA_WIDTH-1:0]PWDATA;
+	 bit [(`DATA_WIDTH/8)-1:0]PSTRB;
 
 
         virtual function transaction copy();
