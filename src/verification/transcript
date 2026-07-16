@@ -1,0 +1,309 @@
+# vsim -c APB_top 
+# Start time: 23:11:38 on Jul 16,2026
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# //  Questa Sim
+# //  Version 10.6c linux Jul 25 2017
+# //
+# //  Copyright 1991-2017 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading sv_std.std
+# Loading work.APB_if(fast)
+# Loading work.packages(fast)
+# Loading work.APB_top(fast)
+# ** Warning: (vsim-8441) driver.sv(54): Clocking block output vif.driver_cb.addr_in is not legal in this
+# or another expression.
+#    Time: 0 ns  Iteration: 0  Region: /packages File: package.sv
+# ** Warning: (vsim-8441) driver.sv(52): Clocking block output vif.driver_cb.transfer is not legal in this
+# or another expression.
+#    Time: 0 ns  Iteration: 0  Region: /packages File: package.sv
+# generator generated           0 no of transaction transfer 1, write_read 1, addr_in 62, wdata_in 19a261ba, strb_in 0100, PRDATA b1966e5c, PREADY 0, PSLVERR 0
+# generator generated           1 no of transaction transfer 1, write_read 1, addr_in 52, wdata_in 903d912b, strb_in 0111, PRDATA afb26977, PREADY 0, PSLVERR 0
+# generator generated           2 no of transaction transfer 1, write_read 1, addr_in 1a, wdata_in 78eb517b, strb_in 1000, PRDATA 4c2fa87a, PREADY 1, PSLVERR 0
+# generator generated           3 no of transaction transfer 0, write_read 1, addr_in 98, wdata_in 16416385, strb_in 1100, PRDATA 993391ef, PREADY 0, PSLVERR 0
+# generator generated           4 no of transaction transfer 1, write_read 1, addr_in eb, wdata_in 659b78f4, strb_in 1110, PRDATA dc9b5399, PREADY 1, PSLVERR 0
+# generator generated           5 no of transaction transfer 0, write_read 1, addr_in 6c, wdata_in 1371af59, strb_in 1010, PRDATA 10b19a7a, PREADY 0, PSLVERR 0
+# generator generated           6 no of transaction transfer 0, write_read 1, addr_in be, wdata_in 4f615c87, strb_in 1111, PRDATA 81ea1481, PREADY 1, PSLVERR 0
+# generator generated           7 no of transaction transfer 1, write_read 1, addr_in 8f, wdata_in 90e68ee6, strb_in 1101, PRDATA 1de8baa5, PREADY 0, PSLVERR 0
+# generator generated           8 no of transaction transfer 1, write_read 1, addr_in 98, wdata_in 8fc888b5, strb_in 0101, PRDATA 3f9a0e83, PREADY 1, PSLVERR 0
+# generator generated           9 no of transaction transfer 1, write_read 1, addr_in 6d, wdata_in 374266da, strb_in 1010, PRDATA b3971267, PREADY 1, PSLVERR 0
+# generator generated          10 no of transaction transfer 0, write_read 1, addr_in 61, wdata_in 0de0972a, strb_in 1000, PRDATA 8258fcdd, PREADY 0, PSLVERR 0
+# generator generated          11 no of transaction transfer 1, write_read 1, addr_in ed, wdata_in d9f45454, strb_in 0110, PRDATA fc304af7, PREADY 1, PSLVERR 0
+# generator generated          12 no of transaction transfer 1, write_read 1, addr_in 81, wdata_in 54195b1c, strb_in 0110, PRDATA a787e9d1, PREADY 1, PSLVERR 0
+# generator generated          13 no of transaction transfer 0, write_read 1, addr_in 07, wdata_in 32574836, strb_in 1000, PRDATA a0055813, PREADY 0, PSLVERR 0
+# generator generated          14 no of transaction transfer 1, write_read 1, addr_in 93, wdata_in 1d9b795f, strb_in 1011, PRDATA 7e1967b7, PREADY 0, PSLVERR 0
+# generator generated          15 no of transaction transfer 1, write_read 1, addr_in 0f, wdata_in 0edd95c0, strb_in 1001, PRDATA c88dcdc7, PREADY 1, PSLVERR 0
+# /////////////////////////////////////////////////////////////////////////////////////////////////////////
+# packages.driver.start driver driving at iteration           1                  15
+# MONITOR TO SCOREBOARD PADDR is 00 | PSEL is 0 | PENABLE is 0 | PWRITE is 0 | PWDATA is 00000000 | PSTRB is 0000 
+# 
+#  
+# monitor vif PENABLE 0   PWDATA 00000000 transfer x
+# ***************Driver sending**********************
+# PRDATA b1966e5c
+# PREADY 0
+# PSLVERR 0
+# transfer 1
+# write_read 1
+# addr_in 62
+# w_data_in 19a261ba
+# strb_in 0100
+# ***************************************************
+# Interface transfer=1 addr=62
+# /////////////////////////////////////////////////////////////////////////////////////////////////////////
+# packages.driver.start driver driving at iteration           2                  25
+# MONITOR TO SCOREBOARD PADDR is 00 | PSEL is 0 | PENABLE is 0 | PWRITE is 0 | PWDATA is 00000000 | PSTRB is 0000 
+# 
+#  
+# monitor vif PENABLE 0   PWDATA 00000000 transfer x
+# ***************Driver sending**********************
+# PRDATA afb26977
+# PREADY 0
+# PSLVERR 0
+# transfer 1
+# write_read 1
+# addr_in 52
+# w_data_in 903d912b
+# strb_in 0111
+# ***************************************************
+# Interface transfer=1 addr=52
+# /////////////////////////////////////////////////////////////////////////////////////////////////////////
+# packages.driver.start driver driving at iteration           3                  35
+# MONITOR TO SCOREBOARD PADDR is 00 | PSEL is 1 | PENABLE is 0 | PWRITE is 0 | PWDATA is 00000000 | PSTRB is 0000 
+# 
+#  
+# monitor vif PENABLE 0   PWDATA 00000000 transfer 1
+# ***************Driver sending**********************
+# PRDATA 4c2fa87a
+# PREADY 1
+# PSLVERR 0
+# transfer 1
+# write_read 1
+# addr_in 1a
+# w_data_in 78eb517b
+# strb_in 1000
+# ***************************************************
+# Interface transfer=1 addr=1a
+# /////////////////////////////////////////////////////////////////////////////////////////////////////////
+# packages.driver.start driver driving at iteration           4                  45
+# MONITOR TO SCOREBOARD PADDR is 62 | PSEL is 1 | PENABLE is 1 | PWRITE is 1 | PWDATA is 19a261ba | PSTRB is 0100 
+# 
+#  
+# monitor vif PENABLE 1   PWDATA 19a261ba transfer 1
+# ***************Driver sending**********************
+# PRDATA 993391ef
+# PREADY 0
+# PSLVERR 0
+# transfer 0
+# write_read 1
+# addr_in 98
+# w_data_in 16416385
+# strb_in 1100
+# ***************************************************
+# Interface transfer=0 addr=98
+# /////////////////////////////////////////////////////////////////////////////////////////////////////////
+# packages.driver.start driver driving at iteration           5                  55
+# MONITOR TO SCOREBOARD PADDR is 62 | PSEL is 0 | PENABLE is 0 | PWRITE is 1 | PWDATA is 19a261ba | PSTRB is 0100 
+# 
+#  
+# monitor vif PENABLE 0   PWDATA 19a261ba transfer 1
+# ***************Driver sending**********************
+# PRDATA dc9b5399
+# PREADY 1
+# PSLVERR 0
+# transfer 1
+# write_read 1
+# addr_in eb
+# w_data_in 659b78f4
+# strb_in 1110
+# ***************************************************
+# Interface transfer=1 addr=eb
+# /////////////////////////////////////////////////////////////////////////////////////////////////////////
+# packages.driver.start driver driving at iteration           6                  65
+# MONITOR TO SCOREBOARD PADDR is 62 | PSEL is 0 | PENABLE is 0 | PWRITE is 1 | PWDATA is 19a261ba | PSTRB is 0100 
+# 
+#  
+# monitor vif PENABLE 0   PWDATA 19a261ba transfer 0
+# ***************Driver sending**********************
+# PRDATA 10b19a7a
+# PREADY 0
+# PSLVERR 0
+# transfer 0
+# write_read 1
+# addr_in 6c
+# w_data_in 1371af59
+# strb_in 1010
+# ***************************************************
+# Interface transfer=0 addr=6c
+# /////////////////////////////////////////////////////////////////////////////////////////////////////////
+# packages.driver.start driver driving at iteration           7                  75
+# MONITOR TO SCOREBOARD PADDR is 62 | PSEL is 1 | PENABLE is 0 | PWRITE is 1 | PWDATA is 19a261ba | PSTRB is 0100 
+# 
+#  
+# monitor vif PENABLE 0   PWDATA 19a261ba transfer 1
+# ***************Driver sending**********************
+# PRDATA 81ea1481
+# PREADY 1
+# PSLVERR 0
+# transfer 0
+# write_read 1
+# addr_in be
+# w_data_in 4f615c87
+# strb_in 1111
+# ***************************************************
+# Interface transfer=0 addr=be
+# /////////////////////////////////////////////////////////////////////////////////////////////////////////
+# packages.driver.start driver driving at iteration           8                  85
+# MONITOR TO SCOREBOARD PADDR is eb | PSEL is 1 | PENABLE is 1 | PWRITE is 1 | PWDATA is 659b78f4 | PSTRB is 1110 
+# 
+#  
+# monitor vif PENABLE 1   PWDATA 659b78f4 transfer 0
+# ***************Driver sending**********************
+# PRDATA 1de8baa5
+# PREADY 0
+# PSLVERR 0
+# transfer 1
+# write_read 1
+# addr_in 8f
+# w_data_in 90e68ee6
+# strb_in 1101
+# ***************************************************
+# Interface transfer=1 addr=8f
+# /////////////////////////////////////////////////////////////////////////////////////////////////////////
+# packages.driver.start driver driving at iteration           9                  95
+# MONITOR TO SCOREBOARD PADDR is eb | PSEL is 0 | PENABLE is 0 | PWRITE is 1 | PWDATA is 659b78f4 | PSTRB is 1110 
+# 
+#  
+# monitor vif PENABLE 0   PWDATA 659b78f4 transfer 0
+# ***************Driver sending**********************
+# PRDATA 3f9a0e83
+# PREADY 1
+# PSLVERR 0
+# transfer 1
+# write_read 1
+# addr_in 98
+# w_data_in 8fc888b5
+# strb_in 0101
+# ***************************************************
+# Interface transfer=1 addr=98
+# /////////////////////////////////////////////////////////////////////////////////////////////////////////
+# packages.driver.start driver driving at iteration          10                 105
+# MONITOR TO SCOREBOARD PADDR is eb | PSEL is 1 | PENABLE is 0 | PWRITE is 1 | PWDATA is 659b78f4 | PSTRB is 1110 
+# 
+#  
+# monitor vif PENABLE 0   PWDATA 659b78f4 transfer 1
+# ***************Driver sending**********************
+# PRDATA b3971267
+# PREADY 1
+# PSLVERR 0
+# transfer 1
+# write_read 1
+# addr_in 6d
+# w_data_in 374266da
+# strb_in 1010
+# ***************************************************
+# Interface transfer=1 addr=6d
+# /////////////////////////////////////////////////////////////////////////////////////////////////////////
+# packages.driver.start driver driving at iteration          11                 115
+# MONITOR TO SCOREBOARD PADDR is 8f | PSEL is 1 | PENABLE is 1 | PWRITE is 1 | PWDATA is 90e68ee6 | PSTRB is 1101 
+# 
+#  
+# monitor vif PENABLE 1   PWDATA 90e68ee6 transfer 1
+# ***************Driver sending**********************
+# PRDATA 8258fcdd
+# PREADY 0
+# PSLVERR 0
+# transfer 0
+# write_read 1
+# addr_in 61
+# w_data_in 0de0972a
+# strb_in 1000
+# ***************************************************
+# Interface transfer=0 addr=61
+# /////////////////////////////////////////////////////////////////////////////////////////////////////////
+# packages.driver.start driver driving at iteration          12                 125
+# MONITOR TO SCOREBOARD PADDR is 8f | PSEL is 0 | PENABLE is 0 | PWRITE is 1 | PWDATA is 90e68ee6 | PSTRB is 1101 
+# 
+#  
+# monitor vif PENABLE 0   PWDATA 90e68ee6 transfer 1
+# ***************Driver sending**********************
+# PRDATA fc304af7
+# PREADY 1
+# PSLVERR 0
+# transfer 1
+# write_read 1
+# addr_in ed
+# w_data_in d9f45454
+# strb_in 0110
+# ***************************************************
+# Interface transfer=1 addr=ed
+# /////////////////////////////////////////////////////////////////////////////////////////////////////////
+# packages.driver.start driver driving at iteration          13                 135
+# MONITOR TO SCOREBOARD PADDR is 8f | PSEL is 0 | PENABLE is 0 | PWRITE is 1 | PWDATA is 90e68ee6 | PSTRB is 1101 
+# 
+#  
+# monitor vif PENABLE 0   PWDATA 90e68ee6 transfer 0
+# ***************Driver sending**********************
+# PRDATA a787e9d1
+# PREADY 1
+# PSLVERR 0
+# transfer 1
+# write_read 1
+# addr_in 81
+# w_data_in 54195b1c
+# strb_in 0110
+# ***************************************************
+# Interface transfer=1 addr=81
+# /////////////////////////////////////////////////////////////////////////////////////////////////////////
+# packages.driver.start driver driving at iteration          14                 145
+# MONITOR TO SCOREBOARD PADDR is 8f | PSEL is 1 | PENABLE is 0 | PWRITE is 1 | PWDATA is 90e68ee6 | PSTRB is 1101 
+# 
+#  
+# monitor vif PENABLE 0   PWDATA 90e68ee6 transfer 1
+# ***************Driver sending**********************
+# PRDATA a0055813
+# PREADY 0
+# PSLVERR 0
+# transfer 0
+# write_read 1
+# addr_in 07
+# w_data_in 32574836
+# strb_in 1000
+# ***************************************************
+# Interface transfer=0 addr=07
+# /////////////////////////////////////////////////////////////////////////////////////////////////////////
+# packages.driver.start driver driving at iteration          15                 155
+# MONITOR TO SCOREBOARD PADDR is ed | PSEL is 1 | PENABLE is 1 | PWRITE is 1 | PWDATA is d9f45454 | PSTRB is 0110 
+# 
+#  
+# monitor vif PENABLE 1   PWDATA d9f45454 transfer 1
+# ***************Driver sending**********************
+# PRDATA 7e1967b7
+# PREADY 0
+# PSLVERR 0
+# transfer 1
+# write_read 1
+# addr_in 93
+# w_data_in 1d9b795f
+# strb_in 1011
+# ***************************************************
+# Interface transfer=1 addr=93
+# MONITOR TO SCOREBOARD PADDR is ed | PSEL is 1 | PENABLE is 1 | PWRITE is 1 | PWDATA is d9f45454 | PSTRB is 0110 
+# 
+#  
+# monitor vif PENABLE 1   PWDATA d9f45454 transfer 0
+# 
+#  -------------------VERIFICATION COMPLETED----------------
+# 
+# ** Note: $finish    : top.sv(31)
+#    Time: 165 ns  Iteration: 2  Instance: /APB_top
+# End time: 23:11:47 on Jul 16,2026, Elapsed time: 0:00:09
+# Errors: 0, Warnings: 2

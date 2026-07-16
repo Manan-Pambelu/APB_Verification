@@ -1,7 +1,7 @@
 `define DATA_WIDTH 32
 `define ADDR_WIDTH 8
 
-`define transaction_count 25
+`define transaction_count 15
 /*
 function int log2(int num);
 	begin

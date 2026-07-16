@@ -11,7 +11,7 @@ interface APB_if(input logic PCLK, input logic PRESETn);
 	logic transfer;
 	logic write_read;
 	logic [`ADDR_WIDTH-1:0] addr_in;
-	logic [`DATA_WIDTH-1:0] w_data_in;
+	logic [`DATA_WIDTH-1:0] wdata_in;
 	logic [(`DATA_WIDTH/8)-1:0] strb_in;
 
 
@@ -32,7 +32,7 @@ interface APB_if(input logic PCLK, input logic PRESETn);
 		default input #0 output #0;
 
 		output PRDATA, PREADY, PSLVERR;
-		output transfer, write_read, addr_in, w_data_in, strb_in;
+		output transfer, write_read, addr_in, wdata_in, strb_in;
 		input PRESETn;
 	endclocking
 
@@ -42,6 +42,7 @@ interface APB_if(input logic PCLK, input logic PRESETn);
 
 		input PADDR, PSEL, PENABLE, PWRITE, PWDATA, PSTRB;
 		input rdata_out, transfer_done, error;
+		input transfer;
 	endclocking
 
 	clocking reference_cb @(posedge PCLK);
